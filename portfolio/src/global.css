@@ -1,0 +1,28 @@
+:root {
+  --white: #fff;
+  --black: #000;
+
+  /* Light mode variables */
+  --light-mode-background: #fff;
+  --light-mode-text-color: #202020;
+  --light-mode-theme-icon-color: #646464;
+  --light-mode-icon-color: #202020;
+  --light-mode-h1-color: #202020;
+  --light-mode-h2-color: #4A4A4A;
+  --light-mode-content-color: #AFAFAF;
+
+  /* Dark mode variables */
+  --dark-mode-background: #111111;
+  --dark-mode-text-color: #EEEEEE;
+  --dark-mode-theme-icon-color: #B4B4B4;
+  --dark-mode-icon-color: #EEEEEE;
+  --dark-mode-h1-color: #EEEEEE;
+  --dark-mode-h2-color: #EEEEEE;
+  --dark-mode-content-color: #AFAFAF;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
