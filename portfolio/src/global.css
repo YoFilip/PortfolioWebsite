@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --white: #fff;
   --black: #000;
@@ -9,7 +12,7 @@
   --light-mode-icon-color: #202020;
   --light-mode-h1-color: #202020;
   --light-mode-h2-color: #4A4A4A;
-  --light-mode-content-color: #AFAFAF;
+  --light-mode-content-color: #888888;
 
   /* Dark mode variables */
   --dark-mode-background: #111111;
@@ -19,10 +22,31 @@
   --dark-mode-h1-color: #EEEEEE;
   --dark-mode-h2-color: #EEEEEE;
   --dark-mode-content-color: #AFAFAF;
+
+  --nav-text: #646464;
+
+  --button: #F9F9F9;
+  --button-hover: #fafafa;
+
+  --dark-mode-button: #191919;
+  --dark-mode-button: #191919;
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

@@ -1,0 +1,51 @@
+.navbarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 1rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.logo {
+    height: 25px;
+    margin-right: 20px;
+}
+
+.navLinks a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--nav-text);
+}
+
+.navLinks li {
+    margin: 0 10px;
+}
+
+
+.modeSwitch {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modeIcon {
+    height: 20px;
+    vertical-align: middle;
+    margin-bottom: 02px;
+}
