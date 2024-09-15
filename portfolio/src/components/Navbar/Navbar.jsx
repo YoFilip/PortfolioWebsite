@@ -1,30 +1,83 @@
-import React from "react";
-import light_mode_icon from "../../assets/light-mode-switch.svg";
-import dark_mode_icon from "../../assets/dark-mode-switch.svg";
+import React, { useState } from "react";
+import { PiCodeLight } from "react-icons/pi";
+import { IoSunnyOutline } from "react-icons/io5";
+import { LuSunMoon } from "react-icons/lu";
 import styles from "./Navbar.module.css";
 
-function Navbar({ isDarkMode, toggleDarkMode }) {
+const Navbar = ({ isDarkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleThemeChange = (theme) => {
+    if (
+      (theme === "Light" && isDarkMode) ||
+      (theme === "Dark" && !isDarkMode)
+    ) {
+      toggleDarkMode();
+    }
+    setIsMenuOpen(false);
+  };
+
+  const darkModeClass = isDarkMode ? styles.dark : "";
+
   return (
-    <div className={styles.navbarContainer}>
-      <nav className={styles.navbar}>
-        <ul className={styles.navLinks}>
-          <li>
-            <a href="#about">About</a>
+    <div className={`${styles["navbar-container"]} ${darkModeClass}`}>
+      <nav className={`${styles.navbar} ${darkModeClass}`}>
+        <a href="#home">
+          <PiCodeLight className={styles.logo} />
+        </a>
+        <ul className={`${styles["nav-links"]} ${darkModeClass}`}>
+          <li className={styles["nav-item"]}>
+            <a href="#about" className={styles["nav-link"]}>
+              About
+            </a>
           </li>
-          <li>
-            <a href="#blog">Blog</a>
+          <li className={styles["nav-item"]}>
+            <a href="#blog" className={styles["nav-link"]}>
+              Blog
+            </a>
           </li>
         </ul>
-        <button onClick={toggleDarkMode} className={styles.modeSwitch}>
-          <img
-            src={isDarkMode ? dark_mode_icon : light_mode_icon}
-            alt="Mode Switch"
-            className={styles.modeIcon}
-          />
-        </button>
+        <div className={`${styles.dropdown} ${darkModeClass}`}>
+          <button
+            onClick={handleMenuToggle}
+            className={`${styles["theme-toggle"]} ${darkModeClass}`}>
+            {isDarkMode ? (
+              <LuSunMoon
+                className={`${styles["theme-icon"]} ${darkModeClass}`}
+              />
+            ) : (
+              <IoSunnyOutline
+                className={`${styles["theme-icon"]} ${darkModeClass}`}
+              />
+            )}
+          </button>
+          <div
+            className={`${styles["dropdown-menu"]} ${
+              isMenuOpen ? styles["dropdown-menu-open"] : ""
+            } ${darkModeClass}`}>
+            <div
+              className={`${isDarkMode ? "" : styles["dropdown-item"]} ${
+                styles["dropdown-item"]
+              } ${darkModeClass}`}
+              onClick={() => handleThemeChange("Light")}>
+              Light
+            </div>
+            <div
+              className={`${isDarkMode ? styles["dropdown-item"] : ""} ${
+                styles["dropdown-item"]
+              } ${darkModeClass}`}
+              onClick={() => handleThemeChange("Dark")}>
+              Dark
+            </div>
+          </div>
+        </div>
       </nav>
     </div>
   );
-}
+};
 
 export default Navbar;

@@ -5,8 +5,7 @@
   --white: #fff;
   --black: #000;
 
-  /* Light mode variables */
-  --light-mode-background: #fff;
+  --light-mode-background-color: #fff;
   --light-mode-text-color: #202020;
   --light-mode-theme-icon-color: #646464;
   --light-mode-icon-color: #202020;
@@ -14,29 +13,27 @@
   --light-mode-h2-color: #4A4A4A;
   --light-mode-content-color: #888888;
 
-  /* Dark mode variables */
-  --dark-mode-background: #111111;
+  --button-background-color: #F9F9F9;
+  --button-hover-background-color: #fafafa;
+
+  --nav-text-color: #646464;
+
+  --dark-mode-background-color: #111111;
   --dark-mode-text-color: #EEEEEE;
   --dark-mode-theme-icon-color: #B4B4B4;
   --dark-mode-icon-color: #EEEEEE;
   --dark-mode-h1-color: #EEEEEE;
   --dark-mode-h2-color: #EEEEEE;
   --dark-mode-content-color: #AFAFAF;
-
-  --nav-text: #646464;
-
-  --button: #F9F9F9;
-  --button-hover: #fafafa;
-
-  --dark-mode-button: #191919;
-  --dark-mode-button: #191919;
+  --dark-mode-dropdown-background-color: #25252583;
+  --dark-mode-dropdown-selected-background-color: #7272724d;
+  --dark-mode-button-background-color: #191919;
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", sans-serif; */
   font-family: "Montserrat", sans-serif;
 }
 

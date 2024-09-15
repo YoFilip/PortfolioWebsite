@@ -4,31 +4,26 @@
     padding: 50px;
 }
 
-.title {
+.heroTitle {
     font-size: 1.7rem;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--light-mode-h1-color);
 }
 
-.description {
+.heroDescription {
     color: var(--light-mode-content-color);
     font-size: 1rem;
     margin-bottom: 20px;
     line-height: 1.8rem;
 }
 
-.link {
-    color: var(--link-color);
-    text-decoration: underline;
-}
-
 .socialLinks {
     margin: 2rem 0 0 0;
 }
 
-.button {
-    background-color: var(--button);
+.socialButton {
+    background-color: var(--button-background-color);
     color: var(--light-mode-icon-color);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -38,35 +33,47 @@
     font-weight: 500;
 }
 
-.button:first-child {
+.socialButton:first-child {
     margin-left: 0;
 }
 
-.button:hover {
-    background-color: var(--button-hover);
+.socialButton:hover {
+    background-color: var(--button-hover-background-color);
 }
-
-
-/* Dark mode styles */
 
 .dark .heroSection {
     background-color: var(--dark-mode-background-color);
     color: var(--dark-mode-text-color);
 }
 
-.dark .title {
+.dark .heroTitle {
     color: var(--dark-mode-h1-color);
 }
 
-.dark .description {
+.dark .heroDescription {
     color: var(--dark-mode-content-color);
 }
 
-.dark .button {
-    background-color: var(--dark-mode-button);
+.dark .socialButton {
+    background-color: var(--dark-mode-button-background-color);
     color: var(--dark-mode-icon-color);
 }
 
-.dark .button:hover {
-    background-color: var(--button-hover);
+.dark .socialButton:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+
+@media (max-width: 600px) {
+    .heroSection {
+        padding: 0 0.4rem;
+    }
+
+    .heroTitle {
+        font-size: 1.5rem;
+    }
+
+    .heroDescription {
+        font-size: 0.875rem;
+    }
 }
