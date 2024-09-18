@@ -77,3 +77,41 @@
         font-size: 0.875rem;
     }
 }
+
+.pinnedProjects {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    /* Ustawienie przestrzeni między projektami */
+    flex-wrap: wrap;
+    /* Aby projekty były ułożone w rzędzie */
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    /* Każdy projekt zajmuje 48% szerokości kontenera */
+}
+
+.projectsTitle {
+    margin-top: 5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--light-mode-content-color);
+}
+
+.projectImage {
+    width: 100%;
+    height: auto;
+}
+
+.projectTitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.projectDescription {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
