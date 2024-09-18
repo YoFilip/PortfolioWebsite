@@ -63,7 +63,6 @@
     background-color: var(--button-hover-background-color);
 }
 
-
 @media (max-width: 600px) {
     .heroSection {
         padding: 0 0.4rem;
@@ -76,22 +75,27 @@
     .heroDescription {
         font-size: 0.875rem;
     }
+
+    .pinnedProjects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
 }
 
 .pinnedProjects {
-    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-    /* Ustawienie przestrzeni między projektami */
     flex-wrap: wrap;
-    /* Aby projekty były ułożone w rzędzie */
 }
 
 .project {
     display: flex;
     flex-direction: column;
     width: 48%;
-    /* Każdy projekt zajmuje 48% szerokości kontenera */
+    margin-top: 2rem;
 }
 
 .projectsTitle {
@@ -101,17 +105,32 @@
     color: var(--light-mode-content-color);
 }
 
+.dark .projectsTitle {
+    color: var(--dark-mode-content-color);
+}
+
 .projectImage {
     width: 100%;
     height: auto;
+    border-radius: 0.5rem;
 }
 
 .projectTitle {
     font-size: 1rem;
     margin-top: 0.5rem;
+    color: var(--light-mode-h1-color);
+}
+
+.dark .projectTitle {
+    color: var(--dark-mode-h1-color);
 }
 
 .projectDescription {
     font-size: 0.8rem;
-    margin-top: 0.25rem;
+    margin-top: -0.5rem;
+    color: var(--light-mode-content-color);
+}
+
+.dark .projectDescription {
+    color: var(--dark-mode-content-color);
 }
