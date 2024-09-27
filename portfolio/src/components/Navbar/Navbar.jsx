@@ -4,7 +4,7 @@ import { IoSunnyOutline } from "react-icons/io5";
 import { LuSunMoon } from "react-icons/lu";
 import styles from "./Navbar.module.css";
 
-const Navbar = ({ isDarkMode, toggleDarkMode }) => {
+const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -26,17 +26,23 @@ const Navbar = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <div className={`${styles["navbar-container"]} ${darkModeClass}`}>
       <nav className={`${styles.navbar} ${darkModeClass}`}>
-        <a href="#home">
+        <a href="#home" onClick={() => setActiveComponent("Hero")}>
           <PiCodeLight className={styles.logo} />
         </a>
         <ul className={`${styles["nav-links"]} ${darkModeClass}`}>
           <li className={styles["nav-item"]}>
-            <a href="#about" className={styles["nav-link"]}>
+            <a
+              href="#about"
+              className={styles["nav-link"]}
+              onClick={() => setActiveComponent("About")}>
               About
             </a>
           </li>
           <li className={styles["nav-item"]}>
-            <a href="#blog" className={styles["nav-link"]}>
+            <a
+              href="#blog"
+              className={styles["nav-link"]}
+              onClick={() => setActiveComponent("Blog")}>
               Blog
             </a>
           </li>

@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
-import projectImage1 from "../../assets/project1.png";
-import projectImage2 from "../../assets/project2.png";
+import projectImage1 from "../../assets/projects/project1.png";
+import projectImage2 from "../../assets/projects/project2.png";
 
 const Projects = ({ darkModeClass, textVariantsWithDelay, imageVariants }) => {
   return (
