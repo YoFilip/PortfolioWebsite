@@ -21,12 +21,17 @@ const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
     setIsMenuOpen(false);
   };
 
+  const handleNavigation = (component) => {
+    setActiveComponent(component);
+    window.location.hash = component.toLowerCase();
+  };
+
   const darkModeClass = isDarkMode ? styles.dark : "";
 
   return (
     <div className={`${styles["navbar-container"]} ${darkModeClass}`}>
       <nav className={`${styles.navbar} ${darkModeClass}`}>
-        <a href="#home" onClick={() => setActiveComponent("Hero")}>
+        <a href="#home" onClick={() => handleNavigation("Hero")}>
           <PiCodeLight className={styles.logo} />
         </a>
         <ul className={`${styles["nav-links"]} ${darkModeClass}`}>
@@ -34,7 +39,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
             <a
               href="#about"
               className={styles["nav-link"]}
-              onClick={() => setActiveComponent("About")}>
+              onClick={() => handleNavigation("About")}>
               About
             </a>
           </li>
@@ -42,7 +47,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
             <a
               href="#blog"
               className={styles["nav-link"]}
-              onClick={() => setActiveComponent("Blog")}>
+              onClick={() => handleNavigation("Blog")}>
               Blog
             </a>
           </li>

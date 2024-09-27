@@ -1,5 +1,4 @@
-// src/App.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Blog from "./components/Blog/Blog";
@@ -14,6 +13,21 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
     document.body.classList.toggle("dark-mode", !isDarkMode);
   };
+
+  const setActiveComponentFromHash = () => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      setActiveComponent(hash.charAt(0).toUpperCase() + hash.slice(1));
+    }
+  };
+
+  useEffect(() => {
+    setActiveComponentFromHash();
+    window.addEventListener("hashchange", setActiveComponentFromHash);
+    return () => {
+      window.removeEventListener("hashchange", setActiveComponentFromHash);
+    };
+  }, []);
 
   const renderComponent = () => {
     switch (activeComponent) {

@@ -63,27 +63,6 @@
     background-color: var(--button-hover-background-color);
 }
 
-@media (max-width: 600px) {
-    .heroSection {
-        padding: 0 0.4rem;
-    }
-
-    .heroTitle {
-        font-size: 1.5rem;
-    }
-
-    .heroDescription {
-        font-size: 0.875rem;
-    }
-
-    .pinnedProjects {
-        flex-direction: column;
-    }
-
-    .project {
-        width: 100%;
-    }
-}
 
 .pinnedProjects {
     display: flex;
@@ -117,7 +96,7 @@
 
 .projectTitle {
     font-size: 1rem;
-    margin: 1rem 0.4rem 0.4rem 0.4rem;
+    margin: 1rem 0.4rem 0.4rem 0.2rem;
     color: var(--light-mode-h1-color);
 }
 
@@ -127,15 +106,13 @@
 
 .projectDescription {
     font-size: 0.8rem;
-    margin: 0 0.5rem 1rem 0.4rem;
+    margin: 0 0.5rem 1rem 0.2rem;
     color: var(--light-mode-content-color);
 }
 
 .dark .projectDescription {
     color: var(--dark-mode-content-color);
 }
-
-/* Istniejące style... */
 
 .blogsTitle {
     margin-top: 5rem;
@@ -186,4 +163,47 @@
 
 .dark .blogLink {
     color: var(--dark-mode-h1-color);
+}
+
+
+/* Media Querry*/
+
+@media (max-width: 600px) {
+    .heroSection {
+        padding: 0 0.4rem;
+    }
+
+    .heroTitle {
+        font-size: 1.5rem;
+    }
+
+    .heroDescription {
+        font-size: 0.875rem;
+    }
+
+    .pinnedProjects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .blogDate,
+    .blogLink {
+        font-size: 0.7rem;
+    }
+
+    .blogDate {
+        margin: 1rem 0rem 1rem 0;
+    }
+
+    .blog:last-child {
+        margin-bottom: 5rem;
+    }
+
+    .blogLink {
+        margin: 1rem 0rem 1rem 1.5rem;
+    }
+
 }
