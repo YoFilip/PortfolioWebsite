@@ -117,7 +117,7 @@
 
 .projectTitle {
     font-size: 1rem;
-    margin-top: 0.5rem;
+    margin: 1rem 0.4rem 0.4rem 0.4rem;
     color: var(--light-mode-h1-color);
 }
 
@@ -127,10 +127,63 @@
 
 .projectDescription {
     font-size: 0.8rem;
-    margin-top: -0.5rem;
+    margin: 0 0.5rem 1rem 0.4rem;
     color: var(--light-mode-content-color);
 }
 
 .dark .projectDescription {
     color: var(--dark-mode-content-color);
+}
+
+/* Istniejące style... */
+
+.blogsTitle {
+    margin-top: 5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--light-mode-content-color);
+}
+
+.dark .blogsTitle {
+    color: var(--dark-mode-content-color);
+}
+
+.blogs {
+    margin-top: 2rem;
+}
+
+.blog {
+    display: flex;
+}
+
+.blogDate {
+    font-size: 0.9rem;
+    margin: 1rem 0rem 1rem 0;
+    font-weight: 500;
+    color: var(--light-mode-h1-color);
+}
+
+.blogLink {
+    margin: 1rem 5rem 1rem 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-mode-h1-color);
+    text-decoration: none;
+}
+
+.blogLink:hover {
+    text-decoration: underline;
+}
+
+.dimmed .blogDate,
+.dimmed .blogLink {
+    color: var(--light-mode-content-color);
+}
+
+.dark .blogDate {
+    color: var(--dark-mode-content-color);
+}
+
+.dark .blogLink {
+    color: var(--dark-mode-h1-color);
 }
