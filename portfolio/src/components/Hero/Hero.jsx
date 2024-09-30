@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 import HeroLinks from "./HeroLinks";
 import Projects from "./Projects";
-import Blogs from "./Blogs";
 
 const Hero = ({ isDarkMode }) => {
   const darkModeClass = isDarkMode ? styles.dark : "";
@@ -22,14 +21,6 @@ const Hero = ({ isDarkMode }) => {
   const imageVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.8 },
     visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } },
-  };
-
-  const handleMouseEnter = (index) => {
-    setHoveredBlog(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredBlog(null);
   };
 
   return (
@@ -57,13 +48,6 @@ const Hero = ({ isDarkMode }) => {
         darkModeClass={darkModeClass}
         textVariantsWithDelay={textVariantsWithDelay}
         imageVariants={imageVariants}
-      />
-      <Blogs
-        darkModeClass={darkModeClass}
-        textVariantsWithDelay={textVariantsWithDelay}
-        hoveredBlog={hoveredBlog}
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
       />
     </section>
   );

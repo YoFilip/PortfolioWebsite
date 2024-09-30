@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Blog from "./components/Blog/Blog";
 import About from "./components/About/About";
 import "./global.css";
 
@@ -31,8 +30,6 @@ const App = () => {
 
   const renderComponent = () => {
     switch (activeComponent) {
-      case "Blog":
-        return <Blog isDarkMode={isDarkMode} />;
       case "About":
         return <About isDarkMode={isDarkMode} />;
       default:

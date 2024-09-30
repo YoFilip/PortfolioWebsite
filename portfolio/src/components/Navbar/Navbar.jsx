@@ -43,14 +43,6 @@ const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
               About
             </a>
           </li>
-          <li className={styles["nav-item"]}>
-            <a
-              href="#blog"
-              className={styles["nav-link"]}
-              onClick={() => handleNavigation("Blog")}>
-              Blog
-            </a>
-          </li>
         </ul>
         <div className={`${styles.dropdown} ${darkModeClass}`}>
           <button
@@ -71,15 +63,15 @@ const Navbar = ({ isDarkMode, toggleDarkMode, setActiveComponent }) => {
               isMenuOpen ? styles["dropdown-menu-open"] : ""
             } ${darkModeClass}`}>
             <div
-              className={`${isDarkMode ? "" : styles["dropdown-item"]} ${
-                styles["dropdown-item"]
+              className={`${styles["dropdown-item"]} ${
+                !isDarkMode ? styles["dropdown-item"] : ""
               } ${darkModeClass}`}
               onClick={() => handleThemeChange("Light")}>
               Light
             </div>
             <div
-              className={`${isDarkMode ? styles["dropdown-item"] : ""} ${
-                styles["dropdown-item"]
+              className={`${styles["dropdown-item"]} ${
+                isDarkMode ? styles["dropdown-item"] : ""
               } ${darkModeClass}`}
               onClick={() => handleThemeChange("Dark")}>
               Dark

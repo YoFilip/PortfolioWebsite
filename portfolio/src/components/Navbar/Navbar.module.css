@@ -94,3 +94,9 @@
 .dark .dropdown-item {
     color: var(--dark-mode-dropdown-text-color);
 }
+
+@media (max-width: 768px) {
+    .nav-link {
+        margin: 0 0 0 25px;
+    }
+}
