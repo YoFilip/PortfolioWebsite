@@ -6,7 +6,7 @@ const HeroLinks = ({ darkModeClass, textVariantsWithDelay }) => {
   return (
     <div className={styles.socialLinks}>
       <motion.a
-        href="#"
+        href="https://github.com/YoFilip"
         className={`${styles.socialButton} ${darkModeClass}`}
         initial="hidden"
         animate="visible"
@@ -14,7 +14,7 @@ const HeroLinks = ({ darkModeClass, textVariantsWithDelay }) => {
         Github
       </motion.a>
       <motion.a
-        href="#"
+        href="https://discord.gg/6cACPgUY"
         className={`${styles.socialButton} ${darkModeClass}`}
         initial="hidden"
         animate="visible"
@@ -22,12 +22,12 @@ const HeroLinks = ({ darkModeClass, textVariantsWithDelay }) => {
         Discord
       </motion.a>
       <motion.a
-        href="#"
+        href="https://www.instagram.com/yoofilip?igsh=cHMzYzRqc3Qydmtq&utm_source=qr"
         className={`${styles.socialButton} ${darkModeClass}`}
         initial="hidden"
         animate="visible"
         variants={textVariantsWithDelay}>
-        Facebook
+        Instagram
       </motion.a>
     </div>
   );

@@ -24,7 +24,7 @@ const AboutContact = ({ isDarkMode }) => {
         <motion.div
           className={`${styles.contactBox} ${darkModeClass}`}
           variants={textVariantsWithDelay}>
-          <a href="https://github.com/yourusername" target="_blank">
+          <a href="https://github.com/YoFilip" target="_blank">
             <FaGithub className={styles.icon} />
             GitHub
             <FaArrowRight className={styles.arrowIcon} />
@@ -33,7 +33,7 @@ const AboutContact = ({ isDarkMode }) => {
         <motion.div
           className={styles.contactBox}
           variants={textVariantsWithDelay}>
-          <a href="https://discord.com/yourusername" target="_blank">
+          <a href="https://discord.gg/6cACPgUY" target="_blank">
             <FaDiscord className={styles.icon} />
             Discord
             <FaArrowRight className={styles.arrowIcon} />
@@ -42,7 +42,9 @@ const AboutContact = ({ isDarkMode }) => {
         <motion.div
           className={styles.contactBox}
           variants={textVariantsWithDelay}>
-          <a href="https://instagram.com/yourusername" target="_blank">
+          <a
+            href="https://www.instagram.com/yoofilip?igsh=cHMzYzRqc3Qydmtq&utm_source=qr"
+            target="_blank">
             <FaInstagram className={styles.icon} />
             Instagram
             <FaArrowRight className={styles.arrowIcon} />
