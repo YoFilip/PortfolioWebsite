@@ -1,0 +1,153 @@
+.projectSection {
+    padding: 2rem 3rem;
+    background-color: none;
+
+}
+
+.dark .projectSection {
+    background-color: var(--dark-mode-background-color);
+    color: var(--dark-mode-text-color);
+}
+
+.projectTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+
+}
+
+.dark .projectTitle {
+    color: var(--dark-mode-h1-color);
+}
+
+.subTitleProject {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+}
+
+
+.projectContainer {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projectContent {
+    margin: 1.5rem 0;
+    width: 100%;
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+
+.projectLink {
+    display: inline-block;
+    margin: 1rem 0;
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--link-color);
+    border-radius: 5px;
+    background-color: var(--button-background-color);
+    transition: background-color 0.3s ease;
+}
+
+.projectLink:hover {
+    text-decoration: none;
+    background-color: var(--button-hover-background-color);
+}
+
+.projectButton {
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--link-color);
+    border-radius: 5px;
+    color: var(--light-mode-h1-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.projectButton:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.imageRow {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.projectImage {
+    width: 100%;
+
+    border-radius: 8px;
+}
+
+.imageColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectImage {
+    width: 50rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .projectSection {
+        padding: 1rem;
+    }
+
+    .projectImage {
+        width: 110%;
+        margin: 2rem 2rem;
+    }
+
+    .projectTitle {
+        font-size: 2rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .subTitleProject {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+
+    .projectContainer {
+        max-width: 100%;
+    }
+
+    .projectContent {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+    }
+
+    .projectLink {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectTitle {
+        font-size: 1.8rem;
+    }
+
+    .subTitleProject {
+        font-size: 1rem;
+    }
+
+    .projectContent {
+        font-size: 0.7rem;
+        line-height: 1.4rem;
+    }
+
+    .projectLink {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
