@@ -1,6 +1,7 @@
 # 🌐 Portfolio Website
-
-> [!TIP]
+> [!NOTE]  
+> Website : [yofilip.github.io](https://yofilip.github.io/PortfolioWebsite/)
+> 
 > **The main version of the website is located on the `main` branch. For the latest stable release, please download the project from `main`!**
 
 ## 📝 Project Description
