@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
+import ProjectDetails from "./components/Projects/ProjectDetails";
 import "./global.css";
 
 const App = () => {
@@ -32,13 +33,20 @@ const App = () => {
     switch (activeComponent) {
       case "About":
         return <About isDarkMode={isDarkMode} />;
+      case "Projectdetails":
+        return <ProjectDetails isDarkMode={isDarkMode} />;
       default:
-        return <Hero isDarkMode={isDarkMode} />;
+        return (
+          <Hero
+            isDarkMode={isDarkMode}
+            setActiveComponent={setActiveComponent}
+          />
+        );
     }
   };
 
   return (
-    <div className="container">
+    <div className={`container ${isDarkMode ? "dark" : ""}`}>
       <Navbar
         isDarkMode={isDarkMode}
         toggleDarkMode={toggleDarkMode}

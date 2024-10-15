@@ -1,10 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
-import projectImage1 from "../../assets/projects/project1.png";
-import projectImage2 from "../../assets/projects/project2.png";
+import projectImage2 from "../../assets/screens/phoneScreen2.png";
 
-const Projects = ({ darkModeClass, textVariantsWithDelay, imageVariants }) => {
+const Projects = ({
+  darkModeClass,
+  textVariantsWithDelay,
+  imageVariants,
+  setActiveComponent,
+}) => {
+  const handleImageClick = () => {
+    setActiveComponent("ProjectDetails");
+    window.location.hash = "projectdetails";
+  };
+
   return (
     <>
       <motion.h2
@@ -17,55 +26,31 @@ const Projects = ({ darkModeClass, textVariantsWithDelay, imageVariants }) => {
       <div className={styles.pinnedProjects}>
         <div className={styles.project}>
           <motion.img
-            src={projectImage1}
-            alt="ExpensesGraph"
-            className={styles.projectImage}
-            initial="hidden"
-            animate="visible"
-            variants={imageVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 1.05 }}
-          />
-          <motion.h3
-            className={styles.projectTitle}
-            initial="hidden"
-            animate="visible"
-            variants={textVariantsWithDelay}>
-            ExpensesGraph
-          </motion.h3>
-          <motion.p
-            className={styles.projectDescription}
-            initial="hidden"
-            animate="visible"
-            variants={textVariantsWithDelay}>
-            A fully-functional expense management system with interactive charts
-            and an extensive database, providing precise financial analysis.
-          </motion.p>
-        </div>
-        <div className={styles.project}>
-          <motion.img
             src={projectImage2}
-            alt="Lazycode"
+            alt="Portfolio Website"
             className={styles.projectImage}
             initial="hidden"
             animate="visible"
             variants={imageVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1.05 }}
+            onClick={handleImageClick} // Przypisanie handleImageClick
           />
           <motion.h3
             className={styles.projectTitle}
             initial="hidden"
             animate="visible"
             variants={textVariantsWithDelay}>
-            Lazycode
+            Portfolio Website
           </motion.h3>
           <motion.p
             className={styles.projectDescription}
             initial="hidden"
             animate="visible"
             variants={textVariantsWithDelay}>
-            An interactive website for quick learning of programming
+            A responsive website built with React, designed to showcase my
+            projects and skills. It runs smoothly across different devices
+            thanks to modern technology.
           </motion.p>
         </div>
       </div>

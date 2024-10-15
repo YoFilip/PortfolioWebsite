@@ -4,7 +4,7 @@ import styles from "./Hero.module.css";
 import HeroLinks from "./HeroLinks";
 import Projects from "./Projects";
 
-const Hero = ({ isDarkMode }) => {
+const Hero = ({ isDarkMode, setActiveComponent }) => {
   const darkModeClass = isDarkMode ? styles.dark : "";
   const [hoveredBlog, setHoveredBlog] = useState(null);
 
@@ -48,6 +48,7 @@ const Hero = ({ isDarkMode }) => {
         darkModeClass={darkModeClass}
         textVariantsWithDelay={textVariantsWithDelay}
         imageVariants={imageVariants}
+        setActiveComponent={setActiveComponent} // Przekazanie setActiveComponent
       />
     </section>
   );
