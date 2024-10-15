@@ -18,14 +18,17 @@ const ProjectOverview = ({ isDarkMode }) => {
         <motion.p
           className={styles.projectContent}
           variants={textVariantsWithDelay}>
-          Open source analytics dashboard built with Django with over 200k
-          visitors. The dashboard provided a comprehensive and interactive
-          overview of the COVID-19 pandemic.
+          A responsive portfolio website built with React and Vite, featuring
+          smooth animations with Framer Motion. It showcases my projects,
+          skills, and experiences, with a focus on clean design, interactivity,
+          and seamless user experience across all devices.
         </motion.p>
         <motion.button
           className={`${styles.projectButton} ${darkModeClass}`}
           variants={textVariantsWithDelay}
-          onClick={() => window.open("https://yourprojectlink.com", "_blank")}>
+          onClick={() =>
+            window.open("https://github.com/YoFilip/PortfolioWebsite", "_blank")
+          }>
           Github Project
         </motion.button>
         <ProjectMainImages isDarkMode={isDarkMode} imageIndex={0} />

@@ -14,7 +14,7 @@ const HeroLinks = ({ darkModeClass, textVariantsWithDelay }) => {
         Github
       </motion.a>
       <motion.a
-        href="https://discord.gg/6cACPgUY"
+        href="https://discord.gg/WPY4GMu4"
         className={`${styles.socialButton} ${darkModeClass}`}
         initial="hidden"
         animate="visible"

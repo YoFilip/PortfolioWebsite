@@ -33,7 +33,7 @@ const AboutContact = ({ isDarkMode }) => {
         <motion.div
           className={styles.contactBox}
           variants={textVariantsWithDelay}>
-          <a href="https://discord.gg/6cACPgUY" target="_blank">
+          <a href="https://discord.gg/WPY4GMu4" target="_blank">
             <FaDiscord className={styles.icon} />
             Discord
             <FaArrowRight className={styles.arrowIcon} />
