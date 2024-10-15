@@ -6,7 +6,6 @@ import Projects from "./Projects";
 
 const Hero = ({ isDarkMode, setActiveComponent }) => {
   const darkModeClass = isDarkMode ? styles.dark : "";
-  const [hoveredBlog, setHoveredBlog] = useState(null);
 
   const textVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -48,7 +47,7 @@ const Hero = ({ isDarkMode, setActiveComponent }) => {
         darkModeClass={darkModeClass}
         textVariantsWithDelay={textVariantsWithDelay}
         imageVariants={imageVariants}
-        setActiveComponent={setActiveComponent} // Przekazanie setActiveComponent
+        setActiveComponent={setActiveComponent}
       />
     </section>
   );

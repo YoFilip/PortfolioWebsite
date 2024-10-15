@@ -34,7 +34,7 @@ const Projects = ({
             variants={imageVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1.05 }}
-            onClick={handleImageClick} // Przypisanie handleImageClick
+            onClick={handleImageClick}
           />
           <motion.h3
             className={styles.projectTitle}

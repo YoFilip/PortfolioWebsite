@@ -1,7 +1,5 @@
 .projectSection {
     padding: 2rem 3rem;
-    background-color: none;
-
 }
 
 .dark .projectSection {
@@ -13,7 +11,6 @@
     font-size: 2.5rem;
     font-weight: 700;
     margin: 2rem 0 1rem 0;
-
 }
 
 .dark .projectTitle {
@@ -25,7 +22,6 @@
     font-weight: 600;
     margin: 2rem 0 1rem 0;
 }
-
 
 .projectContainer {
     text-align: left;
@@ -81,7 +77,6 @@
 
 .projectImage {
     width: 100%;
-
     border-radius: 8px;
 }
 
