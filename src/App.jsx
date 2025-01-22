@@ -8,6 +8,7 @@ import "./global.css";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeComponent, setActiveComponent] = useState("Hero");
+  const [project, setProject] = useState("");
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -17,7 +18,13 @@ const App = () => {
   const setActiveComponentFromHash = () => {
     const hash = window.location.hash.replace("#", "");
     if (hash) {
-      setActiveComponent(hash.charAt(0).toUpperCase() + hash.slice(1));
+      const [component, project] = hash.split("/");
+      setActiveComponent(
+        component.charAt(0).toUpperCase() + component.slice(1)
+      );
+      setProject(
+        project ? project.charAt(0).toUpperCase() + project.slice(1) : ""
+      );
     }
   };
 
@@ -34,7 +41,7 @@ const App = () => {
       case "About":
         return <About isDarkMode={isDarkMode} />;
       case "Projectdetails":
-        return <ProjectDetails isDarkMode={isDarkMode} />;
+        return <ProjectDetails isDarkMode={isDarkMode} project={project} />;
       default:
         return (
           <Hero
